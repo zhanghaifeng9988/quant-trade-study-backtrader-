@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual Environments
+venv/
+env/
+.venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data files (大型数据文件请勿上传)
+*.h5
+*.hdf5
+*.parquet
+*.feather
+data/raw/
+
+# API Keys / Secrets
+.env
+*.env
+config/secrets.yaml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Model outputs
+models/checkpoints/
+*.pkl
+*.joblib
