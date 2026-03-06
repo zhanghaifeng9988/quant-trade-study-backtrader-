@@ -22,7 +22,11 @@ dependencies:
   - jupyter
   - notebook
   - ipykernel
+
   - pip
   - pip:
     - yfinance
     - backtrader
+    - mkdocs
+    - mkdocs-material
+    - mkdocs-jupyter

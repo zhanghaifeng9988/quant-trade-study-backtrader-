@@ -1,0 +1,146 @@
+site_name: 量化交易从零到一
+site_url: https://Si-Xiaoming.github.io/quant-trade-tutorial/
+repo_url: https://github.com/Si-Xiaoming/quant-trade-tutorial
+edit_uri: edit/main/
+
+theme:
+  name: material
+  language: zh
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换到浅色模式
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search
+  - mkdocs-jupyter:
+      include_source: True
+      execute: False
+      no_input: False
+      show_usage: False
+      highlight_extra_classes: "codehilite"
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - 首页: index.md
+  - 00 环境配置:
+      - 概览: 00_setup/README.md
+      - 环境安装: 00_setup/00_env_setup.ipynb
+  - 01 金融基础概念:
+      - 概览: 01_financial_concepts/README.md
+      - 数学基础: 01_financial_concepts/00_math_foundations.ipynb
+      - 价格与收益: 01_financial_concepts/01_price_and_return.ipynb
+      - 风险与波动率: 01_financial_concepts/02_risk_and_volatility.ipynb
+      - 市场基础: 01_financial_concepts/03_market_basics.ipynb
+      - 概率与模拟: 01_financial_concepts/04_probability_and_simulation.ipynb
+      - GARCH 波动率: 01_financial_concepts/05_garch_volatility.ipynb
+      - 统计学基础: 01_financial_concepts/06_statistics_fundamentals.ipynb
+      - 时间序列分析: 01_financial_concepts/07_time_series_analysis.ipynb
+      - 胖尾分布: 01_financial_concepts/08_heavy_tails.ipynb
+      - 大数定律与中心极限定理: 01_financial_concepts/09_lln_clt.ipynb
+      - 现值理论: 01_financial_concepts/10_present_value.ipynb
+      - AR(1) 过程: 01_financial_concepts/11_ar1_processes.ipynb
+  - 02 数据获取与处理:
+      - 概览: 02_data/README.md
+      - 数据源: 02_data/01_data_sources.ipynb
+      - 数据清洗: 02_data/02_data_cleaning.ipynb
+      - 特征工程: 02_data/03_feature_engineering.ipynb
+  - 03 技术指标与信号:
+      - 概览: 03_indicators/README.md
+      - 趋势指标: 03_indicators/01_trend_indicators.ipynb
+      - 动量指标: 03_indicators/02_momentum_indicators.ipynb
+      - 波动率指标: 03_indicators/03_volatility_indicators.ipynb
+      - 股票池筛选: 03_indicators/04_universe_selection.ipynb
+      - 协整与相关性: 03_indicators/05_cointegration_correlation.ipynb
+  - 04 策略回测框架:
+      - 概览: 04_backtesting/README.md
+      - 策略思维: 04_backtesting/00_strategy_thinking.ipynb
+      - 简单回测: 04_backtesting/01_simple_backtest.ipynb
+      - Backtrader 入门: 04_backtesting/02_backtrader_intro.ipynb
+      - 绩效评估: 04_backtesting/03_performance_metrics.ipynb
+      - 经典策略复现: 04_backtesting/04_classic_strategies.ipynb
+      - Beta 对冲: 04_backtesting/05_beta_hedging.ipynb
+      - 配对交易: 04_backtesting/06_pairs_trading_strategy.ipynb
+      - 卡尔曼滤波: 04_backtesting/07_kalman_filter_applications.ipynb
+      - 市场冲击与滑点: 04_backtesting/08_market_impact_slippage.ipynb
+      - 股票多空策略: 04_backtesting/09_long_short_equity.ipynb
+      - 业绩归因: 04_backtesting/10_performance_attribution.ipynb
+  - 05 投资组合优化:
+      - 概览: 05_portfolio/README.md
+      - Markowitz 优化: 05_portfolio/01_markowitz.ipynb
+      - 风险平价: 05_portfolio/02_risk_parity.ipynb
+      - CAPM & APT: 05_portfolio/03_capm_apt.ipynb
+      - 因子分析: 05_portfolio/04_factor_analysis.ipynb
+      - 风险模型: 05_portfolio/05_risk_models.ipynb
+      - VaR & CVaR: 05_portfolio/06_var_cvar.ipynb
+      - 协方差估计: 05_portfolio/07_covariance_estimation.ipynb
+      - 动态资产配置: 05_portfolio/08_dynamic_asset_allocation.ipynb
+      - 状态切换模型: 05_portfolio/09_regime_switching.ipynb
+  - 06 机器学习与量化:
+      - 概览: 06_ml_trading/README.md
+      - 特征选择: 06_ml_trading/01_feature_selection.ipynb
+      - 机器学习预测: 06_ml_trading/02_ml_prediction.ipynb
+      - 深度学习: 06_ml_trading/03_deep_learning.ipynb
+      - 过拟合的危险: 06_ml_trading/04_dangers_of_overfitting.ipynb
+      - 交叉验证: 06_ml_trading/05_cross_validation.ipynb
+      - 高级组合优化: 06_ml_trading/06_advanced_portfolio_optimization.ipynb
+      - 杠杆与保证金: 06_ml_trading/07_leverage_and_margin.ipynb
+  - 07 基本面量化:
+      - 概览: 07_fundamental/README.md
+      - 财务报表分析: 07_fundamental/01_financial_statements.ipynb
+      - 价值因子: 07_fundamental/02_value_factors.ipynb
+      - 质量因子: 07_fundamental/03_quality_factors.ipynb
+      - 盈利意外: 07_fundamental/04_earnings_surprise.ipynb
+  - 08 期货与商品策略:
+      - 概览: 08_futures/README.md
+      - 期货基础: 08_futures/01_futures_basics.ipynb
+      - 商品动量: 08_futures/02_commodity_momentum.ipynb
+      - 期限结构策略: 08_futures/03_term_structure_strategy.ipynb
+  - 09 高频交易与微观结构:
+      - 概览: 09_hft/README.md
+      - 订单簿基础: 09_hft/01_order_book_basics.ipynb
+      - 做市商策略: 09_hft/02_market_making.ipynb
+  - 10 量化数学方法:
+      - 概览: 10_math_methods/README.md
+      - 蒙特卡洛方法: 10_math_methods/01_monte_carlo.ipynb
+      - 线性规划与优化: 10_math_methods/02_linear_programming.ipynb
+      - 马尔可夫链: 10_math_methods/03_markov_chains.ipynb
+      - 最大似然估计: 10_math_methods/04_mle_estimation.ipynb
