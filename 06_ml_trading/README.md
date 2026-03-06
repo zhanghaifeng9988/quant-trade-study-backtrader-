@@ -1,20 +1,18 @@
-# 模块6：机器学习与量化交易
+# 模块6：机器学习与量化
 
-机器学习为量化交易提供了更强大的信号挖掘能力，但也带来了更高的过拟合风险。
+当传统的线性模型和简单指标不足以挖掘市场中非线性的微弱信号时，机器学习便成为了顶级机构的利器。但金融市场的低信噪比使得 AI 模型极易过拟合。本模块教你如何防御性地使用机器学习。
 
-## 内容
+## 📓 课程目录
 
-| 文件 | 说明 |
+| 文件序号 | 内容说明 |
 |------|------|
-| `01_feature_selection.ipynb` | 因子重要性、相关性筛选、信息比率 |
-| `02_ml_prediction.ipynb` | XGBoost/LightGBM 预测涨跌方向 |
-| `03_deep_learning.ipynb` | LSTM 时序预测简介 |
+| `01_feature_selection.ipynb` | 多重共线性诊断，利用互信息与 LASSO 正则化进行特征降维与挑选 |
+| `02_ml_prediction.ipynb` | 基于树模型（XGBoost/Random Forest）的收益方向预测 |
+| `03_deep_learning.ipynb` | 时序深度模型（LSTM/Transformer）在市场预测中的尝试 |
+| `04_dangers_of_overfitting.ipynb` | 深入理解过拟合陷阱：不要被训练集的完美曲线欺骗 |
+| `05_cross_validation.ipynb` | 带时序保护的 Purged K-Fold 交叉验证技术 |
+| `06_advanced_portfolio_optimization.ipynb` | 层次风险平价（HRP）等高级机器学习优化方法 |
+| `07_leverage_and_margin.ipynb` | 凯利公式与杠杆风险管理 |
 
-## ML 量化的核心挑战
-
-1. **金融数据的低信息密度** — 信噪比极低
-2. **非平稳性** — 统计规律随时间变化
-3. **过拟合** — 样本内好，样本外差（"炼金术"陷阱）
-4. **执行风险** — 模型预测与实际交易有差距
-
-> 💡 推荐阅读：Marcos López de Prado《Advances in Financial Machine Learning》
+## ⚠️ 机器学习铁律
+金融不是图像识别！图像里的一只猫无论如何翻转还是猫（模式固定），但金融市场的规律一旦被广泛发现就会失效。严格的正则化（Regularization）和带“时序保护”的验证机制是模型落地的核心保障。

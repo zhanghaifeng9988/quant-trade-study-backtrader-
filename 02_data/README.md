@@ -1,20 +1,15 @@
 # 模块2：数据获取与处理
 
-量化交易的核心之一是**高质量的数据**。本模块介绍主流数据源的使用方法，以及数据清洗的关键技巧。
+数据是量化交易的原材料。不论你的模型多么先进，如果输入的是“垃圾数据”（Garbage In），输出的一定是“垃圾策略”（Garbage Out）。本模块教你如何获取高质量的本土及全球数据，并处理各种现实世界中的数据坑。
 
-## 内容
+## 📓 课程目录
 
-| 文件 | 说明 |
+| 文件序号 | 内容说明 |
 |------|------|
-| `01_data_sources.ipynb` | yfinance（美股）、AKShare（A股）数据获取 |
-| `02_data_cleaning.ipynb` | 缺失值处理、异常值检测、复权处理 |
-| `03_feature_engineering.ipynb` | 从 OHLCV 构建有效特征：滞后项、滚动统计量 |
+| `01_data_sources.ipynb` | 利用 yfinance 等主流工具获取价格、财务和宏观数据 |
+| `02_data_cleaning.ipynb` | 缺失值处理、前向填充、异常值检测（3-sigma）与价格复权对齐 |
+| `03_feature_engineering.ipynb` | 结合平稳性与滚动标准化，从 OHLCV 构建机器学习可用的滞后特征 |
 
-## 常用数据源
-
-| 数据源 | 覆盖市场 | 是否免费 | 说明 |
-|--------|----------|----------|------|
-| [yfinance](https://pypi.org/project/yfinance/) | 美股、全球 | ✅ 免费 | Yahoo Finance API |
-| [AKShare](https://akshare.akfun.cn/) | A股、港股 | ✅ 免费 | 聚合多源数据 |
-| [Tushare](https://tushare.pro/) | A股 | 部分免费 | 需注册获取 Token |
-| [Quandl/Nasdaq Data Link](https://data.nasdaq.com/) | 全球 | 部分免费 | 高质量基本面数据 |
+## ⚠️ 避坑指南
+1. 永远不要使用未复权的价格计算长期收益率。
+2. 特征工程中严禁使用“未来函数”（Look-ahead Bias），全局标准化是新手最容易犯的错误之一。

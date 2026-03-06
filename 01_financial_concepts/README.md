@@ -1,18 +1,23 @@
 # 模块1：金融基础概念
 
-量化交易的第一步是理解金融市场的基本语言。本模块从最基础的价格和收益出发，帮助你建立扎实的金融直觉。
+量化交易的第一步是理解金融市场的基本语言。本模块从最基础的数学、价格和收益出发，逐步深入到波动率建模、概率模拟以及时间序列分析，帮助你建立扎实的量化思维与概率直觉。
 
-## 内容
+## 📓 课程目录
 
-| 文件 | 说明 |
+| 文件序号 | 内容说明 |
 |------|------|
-| `01_price_and_return.ipynb` | 价格的表示方式、简单收益率、对数收益率及其区别 |
-| `02_risk_and_volatility.ipynb` | 风险的定义、波动率计算、夏普比率、最大回撤 |
-| `03_market_basics.ipynb` | 股票、期货、ETF、期权的基本概念 |
+| `00_math_foundations.ipynb` | 线性代数与微积分在量化中的直觉与应用 |
+| `01_price_and_return.ipynb` | 价格表现、简单收益率、对数收益率的奥秘 |
+| `02_risk_and_volatility.ipynb` | 风险定义、波动率计算、夏普比率与最大回撤 |
+| `03_market_basics.ipynb` | 股票、期货、ETF、期权的市场机制与应用 |
+| `04_probability_and_simulation.ipynb` | 概率论、随机过程（几何布朗运动）与蒙特卡洛模拟 |
+| `05_garch_volatility.ipynb` | 波动率聚集效应与 GARCH 模型预测 |
+| `06_statistics_fundamentals.ipynb` | 统计学基础、分布假象与假设检验 |
+| `07_time_series_analysis.ipynb` | 平稳性检验、自相关性、AR/MA 模型与伪回归 |
+| `08_heavy_tails.ipynb` | 胖尾分布与极端尾部风险警告 |
+| `09_lln_clt.ipynb` | 大数定律与中心极限定理的投资学意义 |
+| `10_present_value.ipynb` | 现值理论与跨期资金定价 |
+| `11_ar1_processes.ipynb` | AR(1) 过程与市场均值回归现象 |
 
-## 核心概念
-
-- **简单收益率** $r_t = \frac{P_t - P_{t-1}}{P_{t-1}}$
-- **对数收益率** $r_t = \ln\frac{P_t}{P_{t-1}}$
-- **年化波动率** $\sigma_{annual} = \sigma_{daily} \times \sqrt{252}$
-- **夏普比率** $SR = \frac{E[R] - R_f}{\sigma}$
+## 🎯 学习路径建议
+建议严格按照 00 到 11 的序号顺序学习。每一个概念都是后续策略开发（特别是在统计套利和波动率交易中）的核心基石，并且完成每个 Notebook 结尾的练习。
