@@ -155,3 +155,6 @@ python 00_setup/check_env.py
 - [Quantopian Lectures](https://github.com/quantopian/research_public)
 - [Backtrader 文档](https://www.backtrader.com/docu/)
 - [awesome-quant (中文)](https://github.com/thuquant/awesome-quant)
+- [backtest_tutorial](https://github.com/hudson-and-thames/backtest_tutorial)
+- [QuantEcon](https://github.com/QuantEcon/lecture-intro.zh-cn)
+
