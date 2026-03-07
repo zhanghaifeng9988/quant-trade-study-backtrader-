@@ -3,10 +3,10 @@ channels:
   - pytorch
   - nvidia
   - conda-forge
-  - nodefaults      # 【防坑1】禁用 defaults 频道，彻底解决 OpenMP 和 DLL 冲突
+  - nodefaults      
 dependencies:
-  - python=3.11     # 【防坑2】精准锁定 3.11，绝不写 >=3.10，防止被自动升级到 3.13
-  - numpy<2.0       # 【防坑3】极其关键！防止最新的 Numpy 2.0 破坏底层的 C++ 依赖
+  - python=3.11    
+  - numpy<2.0       
   - pandas
   - matplotlib
   - seaborn
@@ -20,13 +20,13 @@ dependencies:
   - notebook
   - ipykernel
   
-  # --- PyTorch 全家桶 (CUDA 11.8) ---
+  
   - pytorch
   - torchvision
   - torchaudio
-  - pytorch-cuda=11.8  # 【防坑4】精准指定 CUDA 版本
+  - pytorch-cuda=11.8  
   
-  # --- 纯 Python 库走 Pip ---
+
   - pip
   - pip:
     - yfinance
